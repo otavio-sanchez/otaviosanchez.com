@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
- 
+
 const Globals = createGlobalStyle`
 html,
 body {
@@ -12,11 +12,12 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  font-weight: bold;
 }
 
 * {
   box-sizing: border-box;
 }
 `;
- 
+
 export default Globals;

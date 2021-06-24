@@ -1,20 +1,44 @@
-import React from 'react';
-import { Props, Item } from './types';
-import { Header, Title, Nav, List, ItemList, SubTitle } from './style'
+import React, { useState } from 'react';
+import { withTheme } from 'styled-components';
 
+import { themeDefault } from '../../styles/theme';
+import Button from '../button';
+import Icon from './components/icon';
+import { ButtonMenu, Header, ItemList, List, Nav, Title } from './style';
+import { Item, Props } from './types';
 
+const Menu = ({ items, title }: Props): JSX.Element => {
+    const [open, setOpen] = useState(false);
 
-const Menu = ({ items, title, subtitle }: Props) => (
-    <Header>
-        <Title>{title}</Title>
-        <SubTitle>{subtitle}</SubTitle>
+    const changeMenu = () => {
+        setOpen(!open);
+    };
 
-        <Nav>
-            <List>
-                {items.map((item: Item) => <ItemList>{item}</ItemList>)}
-            </List>
-        </Nav>
-    </Header>
-)
+    return (
+        <Header>
+            <Title>{title}</Title>
+            <Nav>
+                <ButtonMenu>
+                    <Button onClick={changeMenu}>
+                        <Icon open={open} />
+                    </Button>
+                </ButtonMenu>
+                <List open={open}>
+                    {items.map((item: Item) => (
+                        <ItemList key={item.link}>
+                            <a href={item.link} title={item.text}>
+                                {item.text}
+                            </a>
+                        </ItemList>
+                    ))}
+                </List>
+            </Nav>
+        </Header>
+    );
+};
 
-export default Menu;
+Menu.defaultProps = {
+    theme: themeDefault
+};
+
+export default withTheme(Menu);
