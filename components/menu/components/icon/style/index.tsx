@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const IconComponent = styled.div`
     height: 40px;
+    width: 40px;
 
     svg {
         height: 40px;
+        width: 40px;
     }
 
     .line {

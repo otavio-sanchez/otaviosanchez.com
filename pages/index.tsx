@@ -1,5 +1,7 @@
 import Head from 'next/head';
+import React from 'react';
 
+import Banner from '../components/banner';
 import Menu from '../components/menu';
 
 export default function Home() {
@@ -29,6 +31,7 @@ export default function Home() {
                     title="OS."
                 />
 
+                <Banner title={'Desenvolvedor'} />
                 <p>test</p>
             </main>
         </div>

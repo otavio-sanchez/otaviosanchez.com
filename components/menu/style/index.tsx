@@ -9,30 +9,28 @@ export const Header = styled.header`
     left: 0px;
     align-items: center;
     background-color: #fff;
-    @media only screen and (max-width: 768px) {
-        justify-content: space-between;
-    }
 `;
 
 export const Title = styled.h1`
     color: ${(props) => props.theme.colors?.main};
     font-size: ${(props) => props.theme.fontSizes?.large};
-    margin: 2px 0px 10px 2px;
+    padding: 2px 5px;
+    margin-right: 30px;
     font-weight: 600;
 `;
 
 export const Nav = styled.nav``;
 
 export const List = styled.ul`
-    height: 100vh;
     display: flex;
     margin: 0px;
     padding: 0px;
-    transition: 1s;
-    background-color: #fff;
+    transition: 0.5s;
 
     @media only screen and (max-width: 768px) {
-        width: ${({ open }) => (open ? '0px' : '100vw')};
+        background-color: #fff;
+        height: 100vh;
+        width: ${({ open }) => (open ? '100vw' : '0px')};
         display: block;
         position: fixed;
         top: 50px;
@@ -55,6 +53,17 @@ export const ItemList = styled.li`
     margin: 0px 15px;
     @media only screen and (max-width: 768px) {
         display: block;
-        margin: 10px;
+        margin: 20px 5.2%;
+    }
+`;
+
+export const Container = styled.div`
+    width: 90%;
+    margin: 0px auto;
+    max-width: 1280px;
+    align-items: center;
+    display: flex;
+    @media only screen and (max-width: 768px) {
+        justify-content: space-between;
     }
 `;
