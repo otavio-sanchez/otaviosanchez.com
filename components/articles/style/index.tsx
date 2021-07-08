@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const BannerContent = styled.section`
+export const Section = styled.section`
     width: 100vw;
     height: calc(100vh - 50px);
     display: flex;
@@ -35,7 +35,9 @@ export const Title = styled.h1`
     }
 `;
 
-export const Container = styled.div`
+export const Body = styled.section``;
+
+export const Article = styled.article`
     width: 90%;
     margin: 0px auto;
     max-width: 1280px;
@@ -46,9 +48,7 @@ export const Container = styled.div`
         flex-flow: column wrap;
         flex-direction: column-reverse;
     }
-`;
 
-export const Infos = styled.article`
     p {
         font-family: 'PlexusSans-ExtraLight';
         font-weight: 600;
@@ -56,10 +56,4 @@ export const Infos = styled.article`
     margin-bottom: 50px;
 `;
 
-export const BannerImage = styled.img`
-    width: 100%;
-`;
-
-export const Content = styled.div`
-    width: 100%;
-`;
+export const Projects = styled.div``;

@@ -1,4 +1,4 @@
 export interface Props {
     title: string;
-    infos: JSX.Element[] | JSX.Element;
+    body: JSX.Element[] | JSX.Element;
 }

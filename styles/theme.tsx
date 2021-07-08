@@ -1,24 +1,27 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
+import Fonts from './fonts';
 import Globals from './globals';
 
 export const themeDefault = {
     colors: {
-        main: '#06B49A',
+        main: '#5652CC',
         text: '#333333'
     },
-    fonts: ['sans-serif', 'Roboto'],
+    fonts: ['PlexusSans-Regular', 'sans-serif', 'Roboto'],
     fontSizes: {
         small: '0.8em',
         medium: '0.9em',
-        large: '1.1em'
+        normal: '1.0em',
+        large: '1.2em'
     }
 };
 
 const Theme = ({ children }: { children: JSX.Element }): JSX.Element => (
     <>
         <ThemeProvider theme={themeDefault}>
+            <Fonts />
             <Globals />
             {children}
         </ThemeProvider>

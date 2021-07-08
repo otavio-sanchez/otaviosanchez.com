@@ -14,6 +14,7 @@ export const Header = styled.header`
 export const Title = styled.h1`
     color: ${(props) => props.theme.colors?.main};
     font-size: ${(props) => props.theme.fontSizes?.large};
+    font-family: PlexusSans-Bold;
     padding: 2px 5px;
     margin-right: 30px;
     font-weight: 600;

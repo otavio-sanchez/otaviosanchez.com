@@ -5,11 +5,15 @@ import { themeDefault } from '../../styles/theme';
 import { ButtonComponent } from './style';
 import { Props } from './types';
 
-const Button = ({ children, onClick, type = 'default' }: Props) => (
-    <ButtonComponent type={type} onClick={onClick}>
-        {children}
-    </ButtonComponent>
-);
+const Button = ({ children, onClick, type = 'default' }: Props) => {
+    console.log(type);
+
+    return (
+        <ButtonComponent type={type} onClick={onClick}>
+            {children}
+        </ButtonComponent>
+    );
+};
 
 Button.defaultProps = {
     theme: themeDefault
