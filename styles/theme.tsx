@@ -7,10 +7,12 @@ import Globals from './globals';
 export const themeDefault = {
     colors: {
         main: '#5652CC',
-        text: '#333333'
+        text: '#333333',
+        textAlternative: '#A3A9D0'
     },
     fonts: ['PlexusSans-Regular', 'sans-serif', 'Roboto'],
     fontSizes: {
+        xSmall: '0.6em',
         small: '0.8em',
         medium: '0.9em',
         normal: '1.0em',

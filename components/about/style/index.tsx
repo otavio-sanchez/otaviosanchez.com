@@ -2,11 +2,9 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
     width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
     background-color: #fff;
-    margin-top: 50px;
 
     .info {
         font-family: PlexusSans-Bold;
@@ -34,15 +32,27 @@ export const Container = styled.div`
 `;
 
 export const Article = styled.article`
-    width: 90%;
+    width: 50%;
     margin: 0px auto;
-    max-width: 1280px;
+    padding-right: 5%;
+    text-align: justify;
 
     p {
         font-family: 'PlexusSans-ExtraLight';
         font-weight: 600;
     }
     margin-bottom: 50px;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
-export const Projects = styled.div``;
+export const ProjectsContainer = styled.div`
+    width: 50%;
+    margin: 0px auto;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+`;

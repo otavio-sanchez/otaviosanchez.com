@@ -4,7 +4,7 @@ export const Section = styled.section`
     width: 100vw;
     height: calc(100vh - 50px);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     background-color: #fff;
     margin-top: 50px;
 
@@ -16,7 +16,7 @@ export const Section = styled.section`
 export const Title = styled.h1`
     margin: 0px;
     color: ${(props) => props.theme.colors?.main};
-    font-size: 150px;
+    font-size: ${(props) => props.theme.fonts?.large};
     padding: 2px 5px;
     margin-right: 30px;
     font-weight: 600;
@@ -35,7 +35,14 @@ export const Title = styled.h1`
     }
 `;
 
-export const Body = styled.section``;
+export const Body = styled.div``;
+
+export const Container = styled.section`
+    width: 90%;
+    margin: 0px auto;
+    max-width: 1280px;
+    display: flex;
+`;
 
 export const Article = styled.article`
     width: 90%;

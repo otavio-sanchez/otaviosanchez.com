@@ -5,6 +5,7 @@ import About from '../components/about';
 import Articles from '../components/articles';
 import Banner from '../components/banner';
 import Menu from '../components/menu';
+import SocialNetworks from '../components/social-networks';
 
 const Home = (): JSX.Element => {
     return (
@@ -35,6 +36,18 @@ const Home = (): JSX.Element => {
                         }
                     ]}
                     title="OS."
+                />
+                <SocialNetworks
+                    items={[
+                        {
+                            icon: 'linkedin',
+                            link: 'https://www.linkedin.com/in/ot%C3%A1vio-sanchez/'
+                        },
+                        {
+                            icon: 'github',
+                            link: 'https://github.com/otavio-sanchez'
+                        }
+                    ]}
                 />
 
                 <Banner

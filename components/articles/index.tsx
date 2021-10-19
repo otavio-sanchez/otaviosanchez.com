@@ -3,7 +3,7 @@ import { withTheme } from 'styled-components';
 import Typed from 'typed.js';
 
 import { themeDefault } from '../../styles/theme';
-import { Article, Body, Projects, Section, Title } from './style';
+import { Article, Body, Container, Section, Title } from './style';
 import { Props } from './types';
 
 const About = ({ title, infos }: Props): JSX.Element => {
@@ -23,11 +23,13 @@ const About = ({ title, infos }: Props): JSX.Element => {
 
     return (
         <Section>
-            <Title>Artigos</Title>
-            <Article>
-                <Title>{title}</Title>
-                <Body>{infos}</Body>
-            </Article>
+            <Container>
+                <Title>Artigos</Title>
+                <Article>
+                    <Title>{title}</Title>
+                    <Body>{infos}</Body>
+                </Article>
+            </Container>
         </Section>
     );
 };

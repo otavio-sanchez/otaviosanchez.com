@@ -3,7 +3,8 @@ import { withTheme } from 'styled-components';
 import Typed from 'typed.js';
 
 import { themeDefault } from '../../styles/theme';
-import { Article, Body, Container, Projects, Section, Title } from './style';
+import Projects from '../projects';
+import { Article, Body, Container, ProjectsContainer, Section, Title } from './style';
 import { Props } from './types';
 
 const About = ({ title, body }: Props): JSX.Element => {
@@ -28,7 +29,32 @@ const About = ({ title, body }: Props): JSX.Element => {
                     <Title>{title}</Title>
                     <Body>{body}</Body>
                 </Article>
-                <Projects>Projetos</Projects>
+                <ProjectsContainer>
+                    <Projects
+                        items={[
+                            {
+                                text: 'abc',
+                                link: '#',
+                                icon: 'github'
+                            },
+                            {
+                                text: 'abc',
+                                link: '#',
+                                icon: 'npm'
+                            },
+                            {
+                                text: 'abc',
+                                link: '#',
+                                icon: 'npm'
+                            },
+                            {
+                                text: 'abc',
+                                link: '#',
+                                icon: 'npm'
+                            }
+                        ]}
+                    />
+                </ProjectsContainer>
             </Container>
         </Section>
     );
