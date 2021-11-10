@@ -5,4 +5,5 @@ export interface Props {
 export interface Item {
     link: string;
     icon: string;
+    text: string;
 }

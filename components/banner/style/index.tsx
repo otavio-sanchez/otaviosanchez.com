@@ -5,17 +5,21 @@ export const BannerContent = styled.section`
     height: calc(100vh - 50px);
     display: flex;
     align-items: center;
-    background-color: #fff;
     margin-top: 50px;
+    position: relative;
+    z-index: 1;
 
-    .info {
+    .title {
         font-family: PlexusSans-Bold;
+        font-size: 30px;
+        color: ${(props) => props.theme.colors?.text};
     }
 `;
 
 export const Title = styled.h1`
     margin: 0px;
     color: ${(props) => props.theme.colors?.main};
+    line-height: 1em;
     font-size: 150px;
     padding: 2px 5px;
     margin-right: 30px;
@@ -52,6 +56,7 @@ export const Infos = styled.article`
     p {
         font-family: 'PlexusSans-ExtraLight';
         font-weight: 600;
+        margin: 8px 0px;
     }
     margin-bottom: 50px;
 `;

@@ -8,7 +8,8 @@ export const Header = styled.header`
     top: 0px;
     left: 0px;
     align-items: center;
-    background-color: #fff;
+    z-index: 10;
+    position: relative;
 `;
 
 export const Title = styled.h1`

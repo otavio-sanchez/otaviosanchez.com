@@ -4,7 +4,7 @@ export const Section = styled.section`
     width: 100vw;
     display: flex;
     align-items: center;
-    background-color: #fff;
+    height: 100vh;
 
     .info {
         font-family: PlexusSans-Bold;

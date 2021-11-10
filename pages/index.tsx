@@ -1,15 +1,32 @@
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import About from '../components/about';
 import Articles from '../components/articles';
 import Banner from '../components/banner';
+import Content from '../components/content';
 import Menu from '../components/menu';
 import SocialNetworks from '../components/social-networks';
 
 const Home = (): JSX.Element => {
+    const [backgroundColor, setBackgroundColor] = useState('#fff');
+    const changeBackground = () => {
+        const height = window.innerHeight / 2;
+
+        if (window.scrollY > height) {
+            setBackgroundColor('#EFEFEF');
+        } else {
+            setBackgroundColor('#fff');
+        }
+    };
+
+    useEffect(() => {
+        changeBackground();
+        window.addEventListener('scroll', changeBackground);
+    });
+
     return (
-        <div>
+        <Content backgroundColor={backgroundColor}>
             <Head>
                 <title>Otávio Sanchez</title>
                 <link rel="icon" href="/favicon.ico" />
@@ -52,7 +69,12 @@ const Home = (): JSX.Element => {
 
                 <Banner
                     title={'Web'}
-                    infos={<p>Olá, me chamo Otávio e seja bem-vindo ao meu site!</p>}
+                    infos={
+                        <div>
+                            <p>Olá, é um prazer te conhecer!</p>
+                            <p>Me chamo Otávio e seja bem-vindo ao meu site!</p>
+                        </div>
+                    }
                 />
                 <About
                     title="Lorem ipsum"
@@ -60,7 +82,7 @@ const Home = (): JSX.Element => {
                 />
                 <Articles />
             </main>
-        </div>
+        </Content>
     );
 };
 
