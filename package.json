@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "test": "jest --runInBand",
+    "heroku-postbuild": "npm run build",
     "test:watch": "jest --watch",
     "lint": "eslint . --ignore-path ./.gitignore",
     "lint:fix": "eslint --fix . --ignore-path ./.gitignore",
