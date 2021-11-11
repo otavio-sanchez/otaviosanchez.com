@@ -16,7 +16,7 @@ const Banner = ({ title, infos }: Props): JSX.Element => {
                         <Typist
                             sentences={['Desenvolvedor', 'Soluções para']}
                             loop={true}
-                            typingSpeed={100}
+                            typingSpeed={300}
                             className="title"
                         />
                         <Title>{title}</Title>

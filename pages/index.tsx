@@ -9,15 +9,11 @@ import Menu from '../components/menu';
 import SocialNetworks from '../components/social-networks';
 
 const Home = (): JSX.Element => {
-    const [backgroundColor, setBackgroundColor] = useState('#fff');
+    const [activeEffect, setActiveEffect] = useState(true);
     const changeBackground = () => {
         const height = window.innerHeight / 2;
 
-        if (window.scrollY > height) {
-            setBackgroundColor('#EFEFEF');
-        } else {
-            setBackgroundColor('#fff');
-        }
+        setActiveEffect(window.scrollY > height)
     };
 
     useEffect(() => {
@@ -26,7 +22,7 @@ const Home = (): JSX.Element => {
     });
 
     return (
-        <Content backgroundColor={backgroundColor}>
+        <Content activeEffect={activeEffect}>
             <Head>
                 <title>Otávio Sanchez</title>
                 <link rel="icon" href="/favicon.ico" />
