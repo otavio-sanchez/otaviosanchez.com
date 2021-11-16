@@ -6,8 +6,6 @@ import { ButtonComponent } from './style';
 import { Props } from './types';
 
 const Button = ({ children, onClick, type = 'default' }: Props) => {
-    console.log(type);
-
     return (
         <ButtonComponent type={type} onClick={onClick}>
             {children}

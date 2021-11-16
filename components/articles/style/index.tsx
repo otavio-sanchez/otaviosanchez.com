@@ -5,7 +5,6 @@ export const Section = styled.section`
     height: calc(100vh - 50px);
     display: flex;
     align-items: flex-start;
-    background-color: #fff;
     margin-top: 50px;
 
     .info {
@@ -23,7 +22,7 @@ export const Title = styled.h1`
     font-family: PlexusSans-Bold;
     padding: 0px;
     @media only screen and (max-width: 768px) {
-        font-size: 9em;
+        font-size: 1em;
     }
 
     @media only screen and (max-width: 369px) {
