@@ -2,16 +2,19 @@ import React, { useState } from 'react';
 import { withTheme } from 'styled-components';
 
 import { themeDefault } from '../../styles/theme';
-import { Container, FooterComponent, Background } from './style';
+import { Background } from '../content/style';
+import { Container, FooterComponent, ContainerFooter } from './style';
 import { Props } from './types';
 
-const Footer = ({ title }: Props): JSX.Element => {
+const Footer = ({ children }: Props): JSX.Element => {
 
     return (
         <FooterComponent>
-            <Background />
+            <ContainerFooter>
+                {children}
+            </ContainerFooter>
             <Container>
-                {title}
+                Otávio Sanchez <span>  ©{new Date().getFullYear()} </span>
             </Container>
         </FooterComponent>
     );

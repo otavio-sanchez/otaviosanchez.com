@@ -3,9 +3,10 @@ import styled from 'styled-components';
 export const Section = styled.section`
     width: 100vw;
     height: calc(100vh - 50px);
-    display: flex;
-    align-items: flex-start;
     margin-top: 50px;
+    background-color: #fff;
+    padding: 50px 0px;
+    box-sizing: border-box;
 
     .info {
         font-family: PlexusSans-Bold;
@@ -15,23 +16,14 @@ export const Section = styled.section`
 export const Title = styled.h1`
     margin: 0px;
     color: ${(props) => props.theme.colors?.main};
-    font-size: ${(props) => props.theme.fonts?.large};
+    font-size: ${(props) => props.theme.fonts?.xxLarge};
     padding: 2px 5px;
     margin-right: 30px;
     font-weight: 600;
     font-family: PlexusSans-Bold;
     padding: 0px;
-    @media only screen and (max-width: 768px) {
-        font-size: 1em;
-    }
-
-    @media only screen and (max-width: 369px) {
-        font-size: 6em;
-    }
-
-    @media only screen and (max-width: 220px) {
-        font-size: 4em;
-    }
+    width: 100%;
+    text-align: center;
 `;
 
 export const Body = styled.div``;
@@ -40,26 +32,17 @@ export const Container = styled.section`
     width: 90%;
     margin: 0px auto;
     max-width: 1280px;
-    display: flex;
 `;
 
 export const Article = styled.article`
     width: 90%;
     margin: 0px auto;
     max-width: 1280px;
-    align-items: center;
-    display: flex;
-    @media only screen and (max-width: 768px) {
-        justify-content: space-between;
-        flex-flow: column wrap;
-        flex-direction: column-reverse;
-    }
 
     p {
         font-family: 'PlexusSans-ExtraLight';
         font-weight: 600;
     }
-    margin-bottom: 50px;
 `;
 
 export const Projects = styled.div``;

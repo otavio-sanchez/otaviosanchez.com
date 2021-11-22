@@ -1,9 +1,4 @@
 export interface Props {
-    items: Item[];
-    title: string;
-}
-
-export interface Item {
-    text: string;
-    link: string;
+    children: JSX.Element | JSX.Element[];
+    content: JSX.Element | JSX.Element[];
 }

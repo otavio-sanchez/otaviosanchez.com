@@ -11,14 +11,14 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: #FC780B;
   font-family: PlexusSans-Regular;
   transition: opacity 0.8s;
 }
 
 a:hover {
   opacity: 0.5;
+  color: #FC780B;
 }
 
 * {

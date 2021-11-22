@@ -7,8 +7,10 @@ import Globals from './globals';
 export const themeDefault = {
     colors: {
         main: '#5652CC',
+        mainDark: '#33317a',
         text: '#333333',
-        textAlternative: '#A3A9D0'
+        textAlternative: '#A3A9D0',
+        warning: '#FC780B'
     },
     fonts: ['PlexusSans-Regular', 'sans-serif', 'Roboto'],
     fontSizes: {
@@ -16,7 +18,9 @@ export const themeDefault = {
         small: '0.8em',
         medium: '0.9em',
         normal: '1.0em',
-        large: '1.2em'
+        large: '1.2em',
+        xLarge: '1.6em',
+        xxLarge: '2em'
     }
 };
 
