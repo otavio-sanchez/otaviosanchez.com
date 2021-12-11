@@ -7,7 +7,7 @@ export const MainContent = styled.div`
 
 export const Background = styled.div`
     transition: all 1s ease;
-    background-color: #EFEFEF;
+    background-color: #efefef;
     width: 200%;
     height: 100vh;
     position: fixed;
@@ -15,24 +15,23 @@ export const Background = styled.div`
     z-index: 0;
 
     ${({ activeEffect }) =>
-        activeEffect ? `
+        activeEffect
+            ? `
             transform: rotate(0);
             top: 0;
             left: 0;
         
-            ` : `
+            `
+            : `
             transform: rotate(-12deg);
             top: -98%;
             left: -40%;
-            `
-
-    }
+            `}
 `;
-
 
 export const BackgroundOut = styled.div`
     transition: all 1s ease;
-    background-color: #A3A9D0;
+    background-color: #a3a9d0;
     width: 200%;
     height: 100vh;
     position: fixed;
@@ -40,15 +39,15 @@ export const BackgroundOut = styled.div`
     z-index: 0;
 
     ${({ activeEffect }) =>
-        activeEffect ? `
+        activeEffect
+            ? `
             transform: rotate(-20deg);
             top: 0;
             left: -40%;
-            ` : `
+            `
+            : `
             transform: rotate(-3deg);
             top: -98%;
             left: -20%;
-            `
-    }
+            `}
 `;
-

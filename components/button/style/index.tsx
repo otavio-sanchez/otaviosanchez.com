@@ -19,7 +19,12 @@ const rotate = keyframes`
 `;
 
 export const ButtonComponent = styled.button`
-    background-color: ${({ type }) => type === 'alternative' ? (props) => props.theme.colors?.main : type === 'transparent' ? 'transparent' : '#fff'};
+    background-color: ${({ type }) =>
+        type === 'alternative'
+            ? (props) => props.theme.colors?.main
+            : type === 'transparent'
+            ? 'transparent'
+            : '#fff'};
     color: ${({ type, theme }) => (type === 'alternative' ? '#fff' : theme.colors?.text)};
     cursor: pointer;
     border: 0px solid #fff;

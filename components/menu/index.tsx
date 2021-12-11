@@ -20,7 +20,11 @@ const Menu = ({ items, title }: Props): JSX.Element => {
                 <Title>{title}</Title>
                 <Nav>
                     <ButtonMenu>
-                        <Button data-testid="menu" id="menu" type="transparent" onClick={changeMenu}>
+                        <Button
+                            data-testid="menu"
+                            id="menu"
+                            type="transparent"
+                            onClick={changeMenu}>
                             <Icon open={open} />
                         </Button>
                     </ButtonMenu>

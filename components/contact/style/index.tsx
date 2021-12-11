@@ -27,16 +27,14 @@ export const Container = styled.nav`
 `;
 
 export const Content = styled.div`
+    p {
+        margin: 0px;
+    }
 
-  p {
-    margin: 0px;
-  }
-
-  div {
-    margin-top:  30px;
-    font-size: ${(props) => props.theme.fonts?.small};
-  }
- 
+    div {
+        margin-top: 30px;
+        font-size: ${(props) => props.theme.fonts?.small};
+    }
 `;
 
 export const List = styled.ul`
@@ -62,7 +60,7 @@ export const Icon = styled.img`
 
 export const Title = styled.h3`
     margin: 0px;
-    color:  #fff;
+    color: #fff;
     font-size: ${(props) => props.theme.fonts?.xxLarge};
     padding: 2px 5px;
     margin-right: 30px;

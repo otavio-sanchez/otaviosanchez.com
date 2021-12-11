@@ -4,19 +4,18 @@ import React, { useEffect, useState } from 'react';
 import About from '../components/about';
 import Articles from '../components/articles';
 import Banner from '../components/banner';
+import Contact from '../components/contact';
 import Content from '../components/content';
+import Footer from '../components/footer';
 import Menu from '../components/menu';
 import SocialNetworks from '../components/social-networks';
-import Footer from '../components/footer';
-import Contact from '../components/contact';
-
 
 const Home = (): JSX.Element => {
     const [activeEffect, setActiveEffect] = useState(true);
     const changeBackground = () => {
         const height = window.innerHeight / 2;
 
-        setActiveEffect(window.scrollY > height)
+        setActiveEffect(window.scrollY > height);
     };
 
     useEffect(() => {

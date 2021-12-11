@@ -21,7 +21,7 @@ export const Container = styled.div`
     text-align: center;
     color: #fff;
     span {
-        color:  ${(props) => props.theme.colors?.warning};
+        color: ${(props) => props.theme.colors?.warning};
         font-size: ${(props) => props.theme.fonts?.small};
     }
     background-color: ${(props) => props.theme.colors?.main};
@@ -43,4 +43,3 @@ export const ContainerFooter = styled.div`
     color: #fff;
     background-color: ${(props) => props.theme.colors?.mainDark};
 `;
-

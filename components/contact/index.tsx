@@ -33,11 +33,10 @@ const Contact = ({ socialNetwork }: Props): JSX.Element => {
         <Container>
             <Content>
                 <Title>Contato</Title>
+                <p>Deseja entrar em contato comigo ou tem alguma dúvida?</p>
                 <p>
-                    Deseja entrar em contato comigo ou tem alguma dúvida?
-                </p>
-                <p>
-                    Mande um email para  <a href="mailto:contato@otaviosanchez.com">contato@otaviosanchez.com</a>.
+                    Mande um email para{' '}
+                    <a href="mailto:contato@otaviosanchez.com">contato@otaviosanchez.com</a>.
                 </p>
 
                 <div> Ou acesse: </div>

@@ -30,7 +30,7 @@ export const Container = styled.div`
     max-width: 1280px;
     display: flex;
     @media only screen and (max-width: 768px) {
-        flex-direction: column;    
+        flex-direction: column;
     }
 `;
 
