@@ -2,7 +2,7 @@ import React from 'react';
 import { withTheme } from 'styled-components';
 
 import { themeDefault } from '../../styles/theme';
-import { Container, Content, Icon, IconContainer, ItemList, List, Title } from './style';
+import { Container, Content, Icon, IconContainer, ItemList, Link, List, Title } from './style';
 import { Item, Props } from './types';
 
 const Contact = ({ socialNetwork }: Props): JSX.Element => {
@@ -36,7 +36,7 @@ const Contact = ({ socialNetwork }: Props): JSX.Element => {
                 <p>Deseja entrar em contato comigo ou tem alguma dúvida?</p>
                 <p>
                     Mande um email para{' '}
-                    <a href="mailto:contato@otaviosanchez.com">contato@otaviosanchez.com</a>.
+                    <Link href="mailto:contato@otaviosanchez.com">contato@otaviosanchez.com</Link>.
                 </p>
 
                 <div> Ou acesse: </div>

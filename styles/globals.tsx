@@ -11,9 +11,10 @@ body {
 }
 
 a {
-  color: #FC780B;
+  color: #333333;
   font-family: PlexusSans-Regular;
   transition: opacity 0.8s;
+  text-decoration: none;
 }
 
 a:hover {

@@ -58,6 +58,10 @@ export const Icon = styled.img`
     margin: 10px;
 `;
 
+export const Link = styled.a`
+    color: ${(props) => props.theme.colors?.textAlternative};
+`;
+
 export const Title = styled.h3`
     margin: 0px;
     color: #fff;
@@ -72,7 +76,7 @@ export const Title = styled.h3`
 `;
 
 export const IconContainer = styled.div`
-    color: ${(props) => props.theme.colors?.textAlternative};
+    color: ${(props) => props.theme.colors?.warning};
     font-size: ${(props) => props.theme.fonts?.xSmall};
     font-family: 'PlexusSans-Regular';
 `;
