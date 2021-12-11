@@ -1,4 +1,4 @@
 export interface Props {
     children: JSX.Element | JSX.Element[];
-    activeEffect: boolean;
+    content: JSX.Element | JSX.Element[];
 }

@@ -27,15 +27,15 @@ export const Title = styled.h1`
     font-family: PlexusSans-Bold;
     padding: 0px;
     @media only screen and (max-width: 768px) {
-        font-size: 9em;
+        font-size: 2em;
     }
 
     @media only screen and (max-width: 369px) {
-        font-size: 6em;
+        font-size: 1.5em;
     }
 
     @media only screen and (max-width: 220px) {
-        font-size: 4em;
+        font-size: 1.2em;
     }
 `;
 

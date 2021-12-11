@@ -29,6 +29,9 @@ export const Container = styled.div`
     margin: 0px auto;
     max-width: 1280px;
     display: flex;
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;    
+    }
 `;
 
 export const Article = styled.article`

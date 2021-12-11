@@ -19,6 +19,8 @@ export const Title = styled.h1`
     padding: 2px 5px;
     margin-right: 30px;
     font-weight: 600;
+    z-index: 10;
+    position: relative;
 `;
 
 export const Nav = styled.nav``;
@@ -35,8 +37,9 @@ export const List = styled.ul`
         width: ${({ open }) => (open ? '100vw' : '0px')};
         display: block;
         position: fixed;
-        top: 50px;
+        top: 0px;
         left: 0px;
+        padding-top: 50px;
         z-index: 3;
         overflow: hidden;
     }
@@ -44,6 +47,8 @@ export const List = styled.ul`
 
 export const ButtonMenu = styled.div`
     display: none;
+    z-index: 10;
+    position: relative;
 
     @media only screen and (max-width: 768px) {
         display: inline-block;
@@ -55,7 +60,7 @@ export const ItemList = styled.li`
     margin: 0px 15px;
     @media only screen and (max-width: 768px) {
         display: block;
-        margin: 20px 5.2%;
+        margin: 20px 6.2%;
     }
 `;
 
