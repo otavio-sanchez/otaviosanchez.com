@@ -4,10 +4,11 @@ export const FooterComponent = styled.footer`
     width: 100vw;
     align-items: center;
     position: relative;
+    background-color: #fff;
 `;
 
 export const Container = styled.div`
-    padding: 15px 0px;
+    padding: 10px 0px;
     display: block;
     bottom: 30px;
     @media only screen and (max-width: 1920px) {
@@ -28,7 +29,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerFooter = styled.div`
-    padding: 15px 0px;
+    padding: 10px 0px;
     display: block;
     bottom: 30px;
     @media only screen and (max-width: 1920px) {
@@ -42,4 +43,14 @@ export const ContainerFooter = styled.div`
     text-align: center;
     color: #fff;
     background-color: ${(props) => props.theme.colors?.mainDark};
+`;
+
+export const Triangle = styled.div`
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-bottom: -4px;
+    border-width: 0 0 4vh 100vw;
+    border-color: transparent transparent ${(props) => props.theme.colors?.mainDark} transparent;
 `;
