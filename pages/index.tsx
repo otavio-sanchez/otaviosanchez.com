@@ -9,9 +9,14 @@ import Content from '../components/content';
 import Footer from '../components/footer';
 import Menu from '../components/menu';
 import SocialNetworks from '../components/social-networks';
+import { requestGitHub } from '../services/github';
+import { requestNpm } from '../services/npm';
 
 const Home = (): JSX.Element => {
     const [activeEffect, setActiveEffect] = useState(true);
+    const [loading, setLoading] = useState(true);
+    const [npmPackages, setNpmPackages] = useState();
+    const [githubFolders, setGithubFolders] = useState();
     const changeBackground = () => {
         const height = window.innerHeight / 2;
 
@@ -22,6 +27,22 @@ const Home = (): JSX.Element => {
         changeBackground();
         window.addEventListener('scroll', changeBackground);
     });
+
+    const request = async () => {
+        try {
+            setLoading(true);
+            setNpmPackages(await requestNpm());
+            setGithubFolders(await requestGitHub());
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        request();
+    }, []);
 
     return (
         <Content activeEffect={activeEffect}>
@@ -40,10 +61,6 @@ const Home = (): JSX.Element => {
                         {
                             text: 'Sobre',
                             link: '/sobre'
-                        },
-                        {
-                            text: 'Artigos',
-                            link: '/artigos'
                         },
                         {
                             text: 'Contato',
@@ -75,10 +92,17 @@ const Home = (): JSX.Element => {
                     }
                 />
                 <About
-                    title="Lorem ipsum"
-                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    title="Quem sou?"
+                    titleProject="Alguns dos Meus Projetos"
+                    body={[
+                        'Sou desenvolvedor desde de 2013, possuo experiência com diversas tecnologias web e na criação de sites e sistemas web. Busco sempre estar conectado a novas tendências e inovações tecnológicas.',
+                        'Bacharel em Ciência e Tecnologia pela Universidade Federal do ABC, um curso multidisciplinar que me permitiu abrir a mente e a buscar novos horizontes através da tecnologia da informação.',
+                        'Atualmente tenho 26 anos, moro em São Paulo, amo futebol, filmes, séries, animes e games.'
+                    ]}
+                    npmProjects={npmPackages}
+                    githubProjects={githubFolders}
                 />
-                <Articles />
+
                 <Footer>
                     <Contact
                         socialNetwork={[

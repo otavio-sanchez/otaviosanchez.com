@@ -2,7 +2,7 @@ import React from 'react';
 import { withTheme } from 'styled-components';
 
 import { themeDefault } from '../../styles/theme';
-import { Icon, IconContainer, ItemList, List } from './style';
+import { Date, Icon, IconContainer, ItemList, List } from './style';
 import { Item, Props } from './types';
 
 const Projects = ({ items }: Props): JSX.Element => {
@@ -12,7 +12,6 @@ const Projects = ({ items }: Props): JSX.Element => {
                 return (
                     <IconContainer>
                         <Icon src="/images/icons/github.svg" title={icon} />
-                        <span>GitHub</span>
                     </IconContainer>
                 );
 
@@ -20,7 +19,6 @@ const Projects = ({ items }: Props): JSX.Element => {
                 return (
                     <IconContainer>
                         <Icon src="/images/icons/npm.svg" title={icon} />
-                        <span>npm</span>
                     </IconContainer>
                 );
         }
@@ -29,10 +27,12 @@ const Projects = ({ items }: Props): JSX.Element => {
     return (
         <List>
             {items?.map((item: Item) => (
-                <ItemList key={item.link}>
+                <ItemList key={item.title}>
                     <div>{renderIcon(item.icon)}</div>
-                    <a href={item.link} title={item.text}>
-                        {item.text}
+                    <a href={item.link} title={item.text} target="_blank" rel="noreferrer">
+                        <h2>{item.title}</h2>
+                        {item.text && <p>{item.text}</p>}
+                        <Date>{item.date}</Date>
                     </a>
                 </ItemList>
             ))}

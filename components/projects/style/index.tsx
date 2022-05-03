@@ -14,6 +14,16 @@ export const ItemList = styled.div`
     display: flex;
     box-sizing: border-box;
     align-items: center;
+    color: ${(props) => props.theme.colors?.text};
+
+    h2 {
+        font-size: 16px;
+        margin: 0px;
+    }
+
+    p {
+        margin: 0px;
+    }
 
     div {
         padding: 10px;
@@ -25,11 +35,11 @@ export const ItemList = styled.div`
     }
 
     &:nth-child(even) {
-        margin-left: 20%;
+        margin-left: 15%;
     }
 
     &:nth-child(odd) {
-        margin-right: 20%;
+        margin-right: 15%;
     }
 
     &:last-child {
@@ -40,6 +50,11 @@ export const ItemList = styled.div`
 export const Icon = styled.img`
     width: 50px;
     display: inline-block;
+`;
+
+export const Date = styled.p`
+    padding-top: 8px;
+    font-size: 12px;
 `;
 
 export const IconContainer = styled.div`

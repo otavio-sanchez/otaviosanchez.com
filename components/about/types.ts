@@ -1,4 +1,7 @@
 export interface Props {
     title: string;
-    body: JSX.Element[] | JSX.Element;
+    titleProject: string;
+    body: string[];
+    npmProjects: any;
+    githubProjects: any;
 }

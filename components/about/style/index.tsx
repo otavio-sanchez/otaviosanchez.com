@@ -22,6 +22,17 @@ export const Title = styled.h1`
     padding: 0px;
 `;
 
+export const TitleProjects = styled.h3`
+    margin: 0px;
+    color: ${(props) => props.theme.colors?.main};
+    font-size: ${(props) => props.theme.fonts?.normal};
+    padding: 2px 5px;
+    margin-right: 30px;
+    font-weight: 600;
+    font-family: PlexusSans-Bold;
+    padding: 0px;
+`;
+
 export const Body = styled.p``;
 
 export const Container = styled.div`

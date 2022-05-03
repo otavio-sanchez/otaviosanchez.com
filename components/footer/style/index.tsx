@@ -46,6 +46,9 @@ export const ContainerFooter = styled.div`
 `;
 
 export const Triangle = styled.div`
+    position: absolute;
+    top: 0px;
+    left: 0px;
     display: inline-block;
     width: 0;
     height: 0;
@@ -53,4 +56,23 @@ export const Triangle = styled.div`
     margin-bottom: -4px;
     border-width: 0 0 4vh 100vw;
     border-color: transparent transparent ${(props) => props.theme.colors?.mainDark} transparent;
+`;
+
+export const TriangleInverse = styled.div`
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-bottom: -4px;
+    border-width: 4vh 0 0 100vw;
+    border-color: transparent transparent transparent ${(props) => props.theme.colors?.main};
+`;
+
+export const ContainerTriangle = styled.div`
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 2;
 `;
