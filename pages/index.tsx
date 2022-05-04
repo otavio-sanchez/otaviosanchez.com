@@ -48,6 +48,7 @@ const Home = (): JSX.Element => {
         <Content activeEffect={activeEffect}>
             <Head>
                 <title>Otávio Sanchez</title>
+                <meta name="description" content="Dicas, tutoriais e artigos de Front-end" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
