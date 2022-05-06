@@ -11,6 +11,7 @@ import Menu from '../components/menu';
 import SocialNetworks from '../components/social-networks';
 import { requestGitHub } from '../services/github';
 import { requestNpm } from '../services/npm';
+import calcAge from '../utils/age';
 
 const Home = (): JSX.Element => {
     const [activeEffect, setActiveEffect] = useState(true);
@@ -98,7 +99,9 @@ const Home = (): JSX.Element => {
                     body={[
                         'Sou desenvolvedor desde de 2013, possuo experiência com diversas tecnologias web e na criação de sites e sistemas web. Busco sempre estar conectado a novas tendências e inovações tecnológicas.',
                         'Bacharel em Ciência e Tecnologia pela Universidade Federal do ABC, um curso multidisciplinar que me permitiu abrir a mente e a buscar novos horizontes através da tecnologia da informação.',
-                        'Atualmente tenho 26 anos, moro em São Paulo, amo futebol, filmes, séries, animes e games.'
+                        `Atualmente tenho ${calcAge(
+                            new Date('1992-10-09')
+                        )} anos, moro em São Paulo, amo futebol, filmes, séries, animes e games.`
                     ]}
                     npmProjects={npmPackages}
                     githubProjects={githubFolders}
