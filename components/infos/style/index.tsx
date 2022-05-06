@@ -11,50 +11,6 @@ export const Section = styled.section`
     }
 `;
 
-export const Image = styled.img`
-    width: 100%;
-    max-width: 360px;
-    z-index: 2;
-`;
-
-export const Background = styled.div`
-    width: 40%;
-    margin: 0 auto;
-    max-width: 360px;
-    transform: rotate(45deg);
-    position: absolute;
-    background-color: ${(props) => props.theme.colors?.main};
-    z-index: 1;
-    margin-left: 16px;
-    margin-bottom: 36px;
-
-    div {
-        width: 23%;
-        padding-bottom: 23%;
-        margin: 1%;
-        float: left;
-    }
-`;
-
-export const BackgroundAlternative = styled.div`
-    width: 40%;
-    margin: 0 auto;
-    max-width: 360px;
-    transform: rotate(45deg);
-    position: absolute;
-    background-color: ${(props) => props.theme.colors?.warning};
-    z-index: 0;
-    margin-left: 16px;
-    margin-bottom: 64px;
-
-    div {
-        width: 23%;
-        padding-bottom: 23%;
-        margin: 1%;
-        float: left;
-    }
-`;
-
 export const Title = styled.h1`
     margin: 0px;
     color: ${(props) => props.theme.colors?.main};
@@ -99,23 +55,18 @@ export const Article = styled.article`
         font-family: 'PlexusSans-ExtraLight';
         font-weight: 600;
     }
+    margin-bottom: 50px;
 
     @media only screen and (max-width: 768px) {
         width: 100%;
-        margin-bottom: 32px;
     }
 `;
 
-export const FigureContainer = styled.figure`
+export const ProjectsContainer = styled.div`
     width: 50%;
     margin: 0px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 
     @media only screen and (max-width: 768px) {
         width: 100%;
-        margin: 32px auto;
     }
 `;

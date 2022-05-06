@@ -2547,6 +2547,14 @@
     "safe-buffer" "^5.0.1"
     "sha.js" "^2.4.8"
 
+"create-react-class@^15.7.0":
+  "integrity" "sha512-QZv4sFWG9S5RUvkTYWbflxeZX+JG7Cz0Tn33rQBJ+WFQTqTfUTjMjiv9tnfXazjsO5r0KhPs+AqCjyrQX6h2ng=="
+  "resolved" "https://registry.npmjs.org/create-react-class/-/create-react-class-15.7.0.tgz"
+  "version" "15.7.0"
+  dependencies:
+    "loose-envify" "^1.3.1"
+    "object-assign" "^4.1.1"
+
 "cross-spawn@^7.0.2", "cross-spawn@^7.0.3":
   "integrity" "sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w=="
   "resolved" "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
@@ -4624,7 +4632,7 @@
     "slice-ansi" "^4.0.0"
     "wrap-ansi" "^6.2.0"
 
-"loose-envify@^1.1.0", "loose-envify@^1.4.0":
+"loose-envify@^1.1.0", "loose-envify@^1.3.1", "loose-envify@^1.4.0":
   "integrity" "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="
   "resolved" "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
   "version" "1.4.0"
@@ -5406,6 +5414,11 @@
   "integrity" "sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg=="
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   "version" "0.8.3"
+
+"react-simple-parallax@^0.2.6":
+  "integrity" "sha1-2YVXeW6ba3I8EjC6HcjrQr71CsM="
+  "resolved" "https://registry.npmjs.org/react-simple-parallax/-/react-simple-parallax-0.2.6.tgz"
+  "version" "0.2.6"
 
 "react-text-typist@^1.1.0":
   "integrity" "sha512-kP7rRHVS1gJX+ZJa6EzhMBk19S7Ex+vzahbMw8EWXALy3UpTHzlw4FnbwWqmBVKus224waWO+CNmNDmhAE1lEg=="
