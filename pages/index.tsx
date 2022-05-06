@@ -47,9 +47,7 @@ const Home = (): JSX.Element => {
     return (
         <Content activeEffect={activeEffect}>
             <Head>
-                <title>Otávio Sanchez</title>
-                <meta name="description" content="Dicas, tutoriais e artigos de Front-end" />
-                <link rel="icon" href="/favicon.ico" />
+                <title>Otávio Sanchez - Desenvolvedor Web</title>
             </Head>
 
             <main>
