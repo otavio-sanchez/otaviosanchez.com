@@ -41,17 +41,13 @@ const Info = ({ title, titleProject, npmProjects, githubProjects }: Props): JSX.
                 });
         }
 
-        npm = npm.concat(github.slice(0, 3));
+        npm = npm.concat(github.slice(0, 7));
         setProjects(npm);
     }, [npmProjects, githubProjects]);
 
     return (
         <Section>
             <Container>
-                <Article>
-                    <Title>{title}</Title>
-                    Skills
-                </Article>
                 <ProjectsContainer>
                     <TitleProjects>{titleProject}</TitleProjects>
                     <Projects items={projects} />

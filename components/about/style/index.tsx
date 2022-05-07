@@ -4,7 +4,10 @@ export const Section = styled.section`
     width: 100vw;
     display: flex;
     align-items: center;
-    height: 100vh;
+    min-height: 80vh;
+    position: relative;
+    padding: 32px 0px;
+    box-sizing: border-box;
 
     .info {
         font-family: PlexusSans-Bold;
@@ -17,16 +20,37 @@ export const Image = styled.img`
     z-index: 2;
 `;
 
+export const Triangle = styled.div`
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 6vh 100vw;
+    border-color: transparent transparent #fff transparent;
+`;
+
 export const Background = styled.div`
-    width: 40%;
+    width: 255px;
     margin: 0 auto;
-    max-width: 360px;
     transform: rotate(45deg);
     position: absolute;
-    background-color: ${(props) => props.theme.colors?.main};
     z-index: 1;
+    margin-bottom: 48px;
     margin-left: 16px;
-    margin-bottom: 36px;
+
+    &::after {
+        content: ' ';
+        background-color: ${(props) => props.theme.colors?.main};
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        transform: rotate(45deg);
+        top: 0px;
+        right: 0px;
+    }
 
     div {
         width: 23%;
@@ -37,15 +61,24 @@ export const Background = styled.div`
 `;
 
 export const BackgroundAlternative = styled.div`
-    width: 40%;
+    width: 255px;
     margin: 0 auto;
-    max-width: 360px;
     transform: rotate(45deg);
     position: absolute;
-    background-color: ${(props) => props.theme.colors?.warning};
-    z-index: 0;
+    z-index: 1;
+    margin-bottom: 32px;
     margin-left: 16px;
-    margin-bottom: 64px;
+
+    &::after {
+        content: ' ';
+        background-color: ${(props) => props.theme.colors?.warning};
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        transform: rotate(45deg);
+        top: 0px;
+        right: 0px;
+    }
 
     div {
         width: 23%;
@@ -94,10 +127,16 @@ export const Article = styled.article`
     margin: 0px auto;
     padding-right: 5%;
     text-align: justify;
+    box-sizing: border-box;
 
     p {
         font-family: 'PlexusSans-ExtraLight';
         font-weight: 600;
+    }
+
+    @media only screen and (max-width: 980px) {
+        width: 45%;
+        padding-right: 5%;
     }
 
     @media only screen and (max-width: 768px) {

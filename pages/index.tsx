@@ -7,6 +7,7 @@ import Banner from '../components/banner';
 import Contact from '../components/contact';
 import Content from '../components/content';
 import Footer from '../components/footer';
+import Infos from '../components/infos';
 import Menu from '../components/menu';
 import SocialNetworks from '../components/social-networks';
 import { requestGitHub } from '../services/github';
@@ -92,12 +93,16 @@ const Home = (): JSX.Element => {
                 />
                 <About
                     title="Quem sou?"
-                    titleProject="Alguns dos Meus Projetos"
                     body={[
                         'Sou desenvolvedor desde de 2013, possuo experiência com diversas tecnologias web e na criação de sites e sistemas web. Busco sempre estar conectado a novas tendências e inovações tecnológicas.',
                         'Bacharel em Ciência e Tecnologia pela Universidade Federal do ABC, um curso multidisciplinar que me permitiu abrir a mente e a buscar novos horizontes através da tecnologia da informação.',
                         'Atualmente tenho 26 anos, moro em São Paulo, amo futebol, filmes, séries, animes e games.'
                     ]}
+                />
+
+                <Infos
+                    title="Quem sou?"
+                    titleProject="Alguns dos Meus Projetos"
                     npmProjects={npmPackages}
                     githubProjects={githubFolders}
                 />

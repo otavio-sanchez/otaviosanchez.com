@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import Theme from '../styles/theme';
 
@@ -88,9 +89,11 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
                 </script>
             </Head>
 
-            <Theme>
-                <Component {...pageProps} />
-            </Theme>
+            <ParallaxProvider>
+                <Theme>
+                    <Component {...pageProps} />
+                </Theme>
+            </ParallaxProvider>
         </>
     );
 }

@@ -4,7 +4,8 @@ export const Section = styled.section`
     width: 100vw;
     display: flex;
     align-items: center;
-    height: 100vh;
+    padding: 48px 0px;
+    background-color: #fff;
 
     .info {
         font-family: PlexusSans-Bold;
@@ -25,12 +26,14 @@ export const Title = styled.h1`
 export const TitleProjects = styled.h3`
     margin: 0px;
     color: ${(props) => props.theme.colors?.main};
-    font-size: ${(props) => props.theme.fonts?.normal};
+    font-size: ${(props) => props.theme.fonts?.large};
+    text-align: center;
     padding: 2px 5px;
     margin-right: 30px;
     font-weight: 600;
     font-family: PlexusSans-Bold;
     padding: 0px;
+    margin-bottom: 16px;
 `;
 
 export const Body = styled.p``;
@@ -46,7 +49,7 @@ export const Container = styled.div`
 `;
 
 export const Article = styled.article`
-    width: 50%;
+    width: 100%;
     margin: 0px auto;
     padding-right: 5%;
     text-align: justify;
@@ -63,7 +66,7 @@ export const Article = styled.article`
 `;
 
 export const ProjectsContainer = styled.div`
-    width: 50%;
+    width: 100%;
     margin: 0px auto;
 
     @media only screen and (max-width: 768px) {

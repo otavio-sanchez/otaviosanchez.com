@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { useParallax } from 'react-scroll-parallax';
 import { withTheme } from 'styled-components';
 
 import { themeDefault } from '../../styles/theme';
@@ -11,11 +12,20 @@ import {
     FigureContainer,
     Image,
     Section,
-    Title
+    Title,
+    Triangle
 } from './style';
 import { Props } from './types';
 
 const About = ({ title, body }: Props): JSX.Element => {
+    const parallax = useParallax({
+        speed: 5
+    });
+
+    const parallaxAlternative = useParallax({
+        speed: 3
+    });
+
     return (
         <Section>
             <Container>
@@ -25,12 +35,14 @@ const About = ({ title, body }: Props): JSX.Element => {
                         alt="Foto do Otávio Sanchez"
                         title="Otávio Sanchez"
                     />
-                    <Background>
+
+                    <Background ref={parallax.ref}>
                         {Array.from(Array(16).keys()).map((value) => (
                             <div key={value} />
                         ))}
                     </Background>
-                    <BackgroundAlternative>
+
+                    <BackgroundAlternative ref={parallaxAlternative.ref}>
                         {Array.from(Array(16).keys()).map((value) => (
                             <div key={value} />
                         ))}
@@ -43,6 +55,7 @@ const About = ({ title, body }: Props): JSX.Element => {
                     ))}
                 </Article>
             </Container>
+            <Triangle />
         </Section>
     );
 };

@@ -69,6 +69,7 @@ export const TriangleInverse = styled.div`
     margin-bottom: -4px;
     border-width: 4vh 0 0 100vw;
     border-color: transparent transparent transparent ${(props) => props.theme.colors?.main};
+    background-color: #fff;
 `;
 
 export const ContainerTriangle = styled.div`

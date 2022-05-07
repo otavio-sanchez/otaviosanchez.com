@@ -6,15 +6,29 @@ export const List = styled.div`
     transition: 0.5s;
     width: 100%;
     align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 `;
 
 export const ItemList = styled.div`
-    padding: 5px 0px;
+    transition: all 1s;
+    padding: 5px;
     border-bottom: 3px solid #ddd;
     display: flex;
     box-sizing: border-box;
     align-items: center;
     color: ${(props) => props.theme.colors?.text};
+    min-width: 24%;
+
+    @media only screen and (max-width: 1024px) {
+        min-width: 49%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        min-width: 100%;
+    }
 
     h2 {
         font-size: 16px;
@@ -34,16 +48,8 @@ export const ItemList = styled.div`
         display: block;
     }
 
-    &:nth-child(even) {
-        margin-left: 15%;
-    }
-
-    &:nth-child(odd) {
-        margin-right: 15%;
-    }
-
-    &:last-child {
-        border-bottom: 0px solid #ccc;
+    a {
+        padding-right: 16px;
     }
 `;
 
