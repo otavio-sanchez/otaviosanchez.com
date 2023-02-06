@@ -13,7 +13,19 @@ const LoadingPage = (): JSX.Element => {
         router.isReady && setIsLoading(false);
     }, [router.isReady]);
 
-    return <BlockMain loading={isLoading} />;
+    return (
+        <BlockMain
+            style={{
+                position: 'fixed',
+                width: '100vw',
+                height: '100vh',
+                backgroundColor: '#fff',
+                top: 0,
+                left: 0
+            }}
+            loading={isLoading}
+        />
+    );
 };
 
 LoadingPage.defaultProps = {

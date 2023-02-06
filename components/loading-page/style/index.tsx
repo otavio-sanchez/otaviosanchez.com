@@ -8,6 +8,6 @@ export const BlockMain = styled.div`
     z-index: 100;
     top: 0px;
     left: 0px;
-    ${({ loading }) => !loading && `top: -100%;`}
-    transition: position 1s ease-out;
+    ${({ loading }) => !loading && `top: -100% !important;`}
+    transition: all 1s ease-out;
 `;
