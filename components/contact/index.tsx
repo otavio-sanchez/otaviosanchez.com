@@ -30,7 +30,7 @@ const Contact = ({ socialNetwork }: Props): JSX.Element => {
     };
 
     return (
-        <Container>
+        <Container id="contato">
             <Content>
                 <Title>Contato</Title>
                 <p>Deseja entrar em contato comigo ou tem alguma dúvida?</p>

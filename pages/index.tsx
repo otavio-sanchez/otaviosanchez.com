@@ -2,7 +2,6 @@ import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
 
 import About from '../components/about';
-import Articles from '../components/articles';
 import Banner from '../components/banner';
 import Contact from '../components/contact';
 import Content from '../components/content';
@@ -63,11 +62,11 @@ const Home = (): JSX.Element => {
                         },
                         {
                             text: 'Sobre',
-                            link: '/sobre'
+                            link: '#sobre'
                         },
                         {
                             text: 'Contato',
-                            link: '/contato'
+                            link: '#contato'
                         }
                     ]}
                     title="OS."

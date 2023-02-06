@@ -27,7 +27,7 @@ const About = ({ title, body }: Props): JSX.Element => {
     });
 
     return (
-        <Section>
+        <Section id="sobre">
             <Container>
                 <FigureContainer>
                     <Image

@@ -21,7 +21,9 @@ const Banner = ({ title, infos }: Props): JSX.Element => {
                         />
                         <Title>{title}</Title>
                         <Infos>{infos}</Infos>
-                        <Button onClick={() => console.log('oi')} type="alternative">
+                        <Button
+                            onClick={() => (window.location.href = '#sobre')}
+                            type="alternative">
                             Ver Mais
                         </Button>
                     </Content>

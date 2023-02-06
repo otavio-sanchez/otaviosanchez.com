@@ -9,5 +9,5 @@ export const BlockMain = styled.div`
     top: 0px;
     left: 0px;
     ${({ loading }) => !loading && `top: -100% !important;`}
-    transition: all 1s ease-out;
+    transition: all 2s ease-out;
 `;
