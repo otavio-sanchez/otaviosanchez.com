@@ -8,6 +8,7 @@ import Contact from '../components/contact';
 import Content from '../components/content';
 import Footer from '../components/footer';
 import Infos from '../components/infos';
+import LoadingPage from '../components/loading-page';
 import Menu from '../components/menu';
 import SocialNetworks from '../components/social-networks';
 import { requestGitHub } from '../services/github';
@@ -53,6 +54,7 @@ const Home = (): JSX.Element => {
             </Head>
 
             <main>
+                <LoadingPage />
                 <Menu
                     items={[
                         {
